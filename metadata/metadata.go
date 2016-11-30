@@ -2,11 +2,12 @@ package metadata
 
 import (
 	"fmt"
+	"time"
+
 	"github.com/Sirupsen/logrus"
 	"github.com/rancher/external-dns/config"
 	"github.com/rancher/external-dns/utils"
 	"github.com/rancher/go-rancher-metadata/metadata"
-	"time"
 )
 
 const (

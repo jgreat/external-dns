@@ -10,6 +10,7 @@ import (
 	"github.com/rancher/external-dns/config"
 	"github.com/rancher/external-dns/metadata"
 	"github.com/rancher/external-dns/providers"
+	_ "github.com/rancher/external-dns/providers/ad"
 	_ "github.com/rancher/external-dns/providers/cloudflare"
 	_ "github.com/rancher/external-dns/providers/dnsimple"
 	_ "github.com/rancher/external-dns/providers/gandi"
@@ -26,13 +27,17 @@ const (
 	forceUpdateInterval = 1
 )
 
+// Op ...
 type Op struct {
 	Name string
 }
 
 var (
-	Add    = Op{Name: "Add"}
+	// Add ...
+	Add = Op{Name: "Add"}
+	// Remove ...
 	Remove = Op{Name: "Remove"}
+	// Update ...
 	Update = Op{Name: "Update"}
 )
 
